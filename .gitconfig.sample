@@ -1,0 +1,25 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = git@github.com:constantclick/freeseoreport.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "github"]
+	url = git@github.com:constantclick/freeseoreport.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "github"]
+	url = git@github.com:constantclick/freeseoreport.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "prod"]
+	url = git@heroku.com:freeseoreport-prod.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[remote "staging"]
+	url = git@heroku.com:freeseoreport-staging.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
