@@ -424,6 +424,7 @@ DEPENDENCIES
   railroady
   rails (= 4.0.2)
   rails-erd!
+  redis
   resque
   resque-status
   rmagick

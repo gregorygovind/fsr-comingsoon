@@ -10,6 +10,7 @@ gem 'pg'
 gem 'airbrake'
 gem 'newrelic_rpm', '~> 3.7.1.188'
 gem 'gibbon'
+gem 'redis'
 
 #engines
 gem 'resque', :require => "resque/server"
