@@ -240,7 +240,11 @@ GEM
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.4)
+    pony (1.8)
+      mail (>= 2.0)
     populator (1.0.0)
+    protected_attributes (1.0.7)
+      activemodel (>= 4.0.1, < 5.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -310,6 +314,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    semrush (3.0.15)
+      activesupport (>= 3.2.0)
+      pony (>= 1.0.0)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
@@ -418,6 +425,7 @@ DEPENDENCIES
   pg
   phony_rails
   populator
+  protected_attributes
   pry-rails
   railroady
   rails (= 4.0.2)
@@ -430,6 +438,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   selenium-webdriver
+  semrush
   simple_form
   squeel
   ssn (~> 1.0.0)

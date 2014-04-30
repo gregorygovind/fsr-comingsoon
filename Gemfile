@@ -57,6 +57,8 @@ gem 'twilio-ruby'
 gem 'unidecoder'
 gem 'wirble'
 gem 'ssn', '~>1.0.0'
+gem 'protected_attributes'
+gem 'semrush'
 
 #imagrs
 gem 'carrierwave'
