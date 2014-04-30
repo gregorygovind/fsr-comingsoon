@@ -61,6 +61,6 @@ require 'json'
                                              :export_columns => 'Pd, Cr, Co, Cp, Db, Hs, Nq, Nr, Ph, Po, Pp, Qu, Rt, Tc, Tr, Ts, Ur, Vu')
 
     @organic = @report_api_url.organic.to_json
-    p 11111111111111111111
+
   end
 end
