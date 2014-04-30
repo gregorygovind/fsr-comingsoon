@@ -18,8 +18,6 @@
         $('#traffic_percent').append(myData[i].traffic_percent + "</br>");
         $('#trends').append(myData[i].trends + "</br>");
         $('#url').append(myData[i].url + "</br>");
-        //tr.append("<td>" + myData[i].keyword + "</td>");
-        //tr.append("<td>" + myData[i].competition + "</td>");
 
     }
   });
@@ -27,57 +25,9 @@
 
 = form_tag semrush_check_apimoz_index_path do
   = label_tag "Input your domain"
-  = text_field_tag :link
+  = text_field_tag :link, nil, :placeholder => 'www.site.com'
   = submit_tag "Seo Report"
 
-- if @organic.blank?
-  %hr
+- if @organic.present?
   %h3
-    Semrush (busic)
-
-  %h2
-    Result for "#{@url}"
-  %table
-    %tr
-      %th Competition
-      %th Cpc
-      %th Keyword
-      %th Number of results
-      %th Position
-      %th Position Diff
-      %th Position previous
-      %th Search Volume
-      %th Traffic for percent
-      %th Traffic percent
-      %th Trends
-      %th Url
-
-    %tr
-      %td
-        #competition
-      %td
-        #cpc
-      %td
-        #keyword
-      %td
-        #number
-      %td
-        #position
-      %th
-        #position_diff
-      %th
-        #position_prev
-      %td
-        #search
-      %td
-        #traffic_cost
-      %td
-        #traffic_percent
-      %td
-        #trends
-      %td
-        #url
-- else
-  You don't have any result
-
-
+    Result is empty

@@ -55,12 +55,15 @@ require 'json'
 
   def semrush_check
     @url = params[:link]
-    @report_api_url = Semrush::Report.domain(params[:link],
+    @report_api_url = Semrush::Report.domain(@url,
                                              :limit => 5,
                                              :api_key => "e888e19f9ffd1e006fad7d497a8cc92d",
                                              :export_columns => 'Pd, Cr, Co, Cp, Db, Hs, Nq, Nr, Ph, Po, Pp, Qu, Rt, Tc, Tr, Ts, Ur, Vu')
 
     @organic = @report_api_url.organic.to_json
 
+    if @organic == "[]"
+      redirect_to apimoz_index_path
+    end
   end
 end

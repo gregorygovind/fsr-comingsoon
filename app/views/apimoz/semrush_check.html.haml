@@ -30,11 +30,12 @@
   = text_field_tag :link, nil
   = submit_tag "Seo Report"
 
-= if @organic.present?
+- if @organic.present?
   %hr
   %h3
-    Semrush (busic)
-
+    Semrush
+    %br
+    = link_to "Clear", apimoz_index_path
   %h2
     Result for "#{@url}"
   %table
@@ -77,6 +78,8 @@
         #trends
       %td
         #url
+- else
+  Wrong value
 
 
 
