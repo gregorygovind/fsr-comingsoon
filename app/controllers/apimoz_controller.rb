@@ -33,12 +33,6 @@ require 'json'
     #@report_busic = report_api_domain.basics
     @organic = @report_api_url.organic.to_json
     #@adwords = report_api_url.adwords.to_json
-
-
-
-
-
-
     ##data = report.basics                          # main report for either a domain or a phrase
     ##data = report.organic                         # organic report for either a domain, a URL or a phrase
     ##data = report.adwords                         # adwords report for either a domain or a URL
@@ -55,12 +49,16 @@ require 'json'
 
   def semrush_check
     @url = params[:link]
-    @report_api_url = Semrush::Report.domain(@url,
-                                             :limit => 5,
-                                             :api_key => "e888e19f9ffd1e006fad7d497a8cc92d",
-                                             :export_columns => 'Pd, Cr, Co, Cp, Db, Hs, Nq, Nr, Ph, Po, Pp, Qu, Rt, Tc, Tr, Ts, Ur, Vu')
+    if !@url.empty?
+      @report_api_url = Semrush::Report.domain(@url,
+                                               :limit => 5,
+                                               :api_key => "e888e19f9ffd1e006fad7d497a8cc92d",
+                                               :export_columns => 'Pd, Cr, Co, Cp, Db, Hs, Nq, Nr, Ph, Po, Pp, Qu, Rt, Tc, Tr, Ts, Ur, Vu')
 
-    @organic = @report_api_url.organic.to_json
+      @organic = @report_api_url.organic.to_json
+    else
+      redirect_to apimoz_index_path
+    end
 
     if @organic == "[]"
       redirect_to apimoz_index_path
