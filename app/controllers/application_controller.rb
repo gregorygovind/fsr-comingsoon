@@ -5,4 +5,5 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user
 
   include SessionsHelper
+  config.relative_url_root = ""
 end

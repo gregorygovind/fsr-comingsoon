@@ -1,0 +1,67 @@
+// Only add SASS variables and mixins in this file, no styling
+
+/* Shades of grey */
+$color1:            #f0f0f0; // Super light grey
+$color2:            #d0d0d0; // Light grey
+$color3:            #707070; // Grey
+$color4:            #303030; // Dark grey
+$color5:            #B2BAC0; // Blue grey
+
+/* Colors */
+$color_link:        #2997D1; // Link blue
+$color_link_hover:  #000; // Link hover
+$color_link_hover:  darken($color_link, 30%); // Link hover
+
+
+$color_bg: #ebeae8;
+$color_footer: #545453;
+$color_tootip: #43525a;
+
+$color_title: #64615a;
+$color_body: darken($color_title, 10%);
+
+$color_error: #CC4941;
+$color_ok: #518F41;
+$color_alert: #E27249;
+
+$color_bg_business: #3f3f3b /*#427933*/;
+$color_title_business: #D09539;
+
+
+$red:           #FF002F;
+$dark_red:      #7f000c;
+
+
+$darkgray:      #33333D;
+$halfdark:      #5A5A64;
+$semidark:      #66666E;
+$normal:        #898992;
+$gray:          #B6B6BB;
+$lightgray:     #DDDDDF;
+$bordercolor:   #E7E7E8;
+$lightergray:   #F7F8F9;
+
+$formborder:    #c2c6cb;
+
+$green:         #84CD64;
+$blue:          #4E92D0;
+$yellow:        #E8BA40;
+$orange:        #EB7059;
+
+$purple:        #908CC2;
+
+$differentblue: #219BCC;
+$darkerblue:    #4387C5;
+
+$pricered:      red;
+
+// Icon colors
+//$color_icon_swim:   #6db8df;
+//$color_icon_swim:   #3B8686;
+$color_icon_swim:   #1C5F84;
+$color_icon_cycle:  #f31a44;
+$color_icon_run:    #464646;
+
+$color_logo_teal: #455660;
+$color_logo_lightyellow: #d4bc89;
+$color_logo_darkyellow: #ddb860;

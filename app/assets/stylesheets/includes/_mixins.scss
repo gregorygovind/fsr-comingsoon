@@ -1,0 +1,29 @@
+// Only add SASS variables and mixins in this file, no styling
+
+@mixin radius($radius) {
+    -webkit-border-radius:      $radius;
+       -moz-border-radius:      $radius;
+         -o-border-radius:      $radius;
+            border-radius:      $radius;
+}
+
+@mixin shadow($shadow) {
+    -webkit-box-shadow:         $shadow;
+       -moz-box-shadow:         $shadow;
+         -o-box-shadow:         $shadow;
+            box-shadow:         $shadow;
+}
+
+@mixin clip($clip) {
+    -webkit-background-clip:    $clip;
+       -moz-background-clip:    $clip;
+         -o-background-clip:    $clip;
+            background-clip:    $clip;
+}
+
+@mixin sizing($box) {
+    -webkit-box-sizing:         $box;
+       -moz-box-sizing:         $box;
+         -o-box-sizing:         $box;
+            box-sizing:         $box;
+}
