@@ -19,7 +19,7 @@
   * Run postgres.app
   * `rake db:drop && rake db:create`
   * `rake db:seed`
-  * `rails s`
+  * Run `rails s`, `redis-server /usr/local/etc/redis.conf` and `sidekiq`
 
 # Resetting the database
 
