@@ -11,23 +11,16 @@ class UsersController < ApplicationController
     @user = User.new(user_create_params)
     store_location
 
-    if @user.save
+    if @user.save!
       sign_in @user
-
-      respond_to do |format|
-        format.html { redirect_to root_path }
-        format.js { render js: "window.location.pathname = #{root_path.to_json}" }
-      end
+      redirect_to root_path
     else
-      respond_to do |format|
-        format.html { render :new }
-        format.js { render :new }
-      end
+      render :new
     end
   end
 
   private
     def user_create_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email, :name, :password)
     end
 end

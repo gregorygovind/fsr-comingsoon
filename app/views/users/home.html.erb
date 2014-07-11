@@ -1,1 +1,6 @@
-<h1>Home page here.</h1>
+<div class="container">
+  <h1>Home page here.</h1>
+  <div class="pull-right">
+    <%= link_to "Log out", session_path(current_user), method: "delete" %>
+  </div>
+</div>
