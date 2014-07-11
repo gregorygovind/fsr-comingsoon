@@ -1,0 +1,22 @@
+<div class="container">
+  <%= form_for(:session, url: sessions_path, :remote => true, html: { id: 'new_session', class: 'form-container' }) do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control', required: true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+    <div class="checkbox fl clearfix">
+      <label class="checkbox-custom">
+        <%= f.check_box :remember_me %> Remember me
+      </label>
+    </div>
+    <div class="fr">
+      <%= f.submit 'Log in', class: 'btn blue fr' %>
+    </div>
+  <% end %>
+</div>
