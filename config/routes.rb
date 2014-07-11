@@ -4,4 +4,8 @@ Freeseoreport::Application.routes.draw do
   end
 
   root 'static_pages#landing'
+
+  resources :users, only: [:new, :create, :edit, :update] do
+  end
+  resources :sessions, only: [:new, :create, :destroy]
 end
