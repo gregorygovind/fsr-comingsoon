@@ -14,10 +14,37 @@ module Freeseoreport
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.autoload_paths += %W(#{Rails.root}/lib)
+
+    config.generators do |g|
+      g.test_framework :rspec,
+      fixtures: true,
+      view_specs: false,
+      helper_specs: false,
+      routing_specs: false,
+      controller_specs: true,
+      request_specs: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address => "email-smtp.us-east-1.amazonaws.com",
+      :port => '587',
+      :user_name => ENV["EMAIL_USER_NAME"], # Your SMTP user here.
+      :password => ENV["EMAIL_PASSWORD"], # Your SMTP password here.
+      :authentication => :login,
+      :enable_starttls_auto => true
+    }
+
+    config.i18n.enforce_available_locales = false
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+    }
   end
 end
