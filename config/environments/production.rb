@@ -77,4 +77,12 @@ Freeseoreport::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.default_url_options = { :host => 'www.freeseoreport.com' }
+  config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "[FreeSEOReport] ",
+    :sender_address => %{"info" <info@freeseoreport.com>},
+    :exception_recipients => %w{philip.desmedt@gmail.com},
+  }
 end
