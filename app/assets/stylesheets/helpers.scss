@@ -1,5 +1,13 @@
 @import 'includes';
 
+a {
+  color: $color_link;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    color: $color_link_hover;
+  }
+}
+
 .fr { float:right; }
 .fl { float:left; }
 
@@ -344,19 +352,71 @@
   font-weight: 700 !important;
 }
 
+/*** TEXT FAMILY ***/
+.text-family-1 {
+  font-family: $base-font !important;
+}
+.text-family-2 {
+  font-family: $second-font !important;
+}
 
 /*** BACKGROUND COLOR ***/
 .bg-white {
   background-color: white !important;
 }
-.bg-logo_teal {
-  background-color: $color_logo_teal !important;
+.bg-black {
+  background-color: #000 !important;
 }
-.bg-logo_lightyellow {
-  background-color: $color_logo_lightyellow !important;
+.bg-black_lighter {
+  background-color: lighten(#000, 25%) !important;
 }
-.bg-logo_darkyellow {
-  background-color: $color_logo_darkyellow !important;
+.bg-black_lightest {
+  background-color: lighten(#000, 50%) !important;
+}
+.bg-primary {
+  background-color: $color_primary !important;
+}
+.bg-primary_darker {
+  background-color: darken($color_primary, 10%) !important;
+}
+.bg-primary_lighter {
+  background-color: lighten($color_primary, 10%) !important;
+}
+.bg-secondary {
+  background-color: $color_secondary !important;
+}
+.bg-secondary_darker {
+  background-color: darken($color_secondary, 10%) !important;
+}
+.bg-secondary_lighter {
+  background-color: lighten($color_secondary, 10%) !important;
+}
+.bg-tertiary {
+  background-color: $color_tertiary !important;
+}
+.bg-tertiary_darker {
+  background-color: darken($color_tertiary, 10%) !important;
+}
+.bg-tertiary_lighter {
+  background-color: lighten($color_tertiary, 10%) !important;
+}
+.bg-green {
+  background-color: $color_ok !important;
+}
+.bg-green_darker {
+  background-color: darken($color_ok, 10%) !important;
+}
+.bg-green_lighter {
+  background-color: lighten($color_ok, 10%) !important;
+}
+.bg-error {
+  background-color: $color_error !important;
+}
+.bg-error_darker {
+  background-color: darken($color_error, 10%) !important;
+}
+.bg-error_lighter {
+  background-color: lighten($color_error, 10%) !important;
 }
 
 /*** BOX MODEL ***/
@@ -401,7 +461,7 @@
   border-color: #333;
 }
 .border-darkbg {
-  border-color: $color_logo_teal;
+  border-color: $color_primary;
 }
 
 

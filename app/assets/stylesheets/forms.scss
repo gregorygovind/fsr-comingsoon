@@ -1,0 +1,87 @@
+@import 'includes';
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: 0;
+  border-bottom: 2px solid #c0c0c0;
+  background-color: #f0f0f0;
+  transition: all 0.4s ease-in-out;
+  &:focus {
+    background: #fff;
+    border-top: 1px solid #fafafa;
+    border-left: 1px solid #fafafa;
+    border-right: 1px solid #fafafa;
+    border-bottom-color: $color_primary;
+    outline: none;
+  }
+}
+textarea {
+  padding: 6px 12px;
+  min-height: 100px;
+}
+
+
+/*** BUTTONS ***/
+.btn {
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    border-color: $color_link;
+    background: $color_link;
+  } 
+  
+  &.btn-default {
+    background-color: transparent;
+    &.white {
+      border-color: white;
+      color: white;
+      &:hover {
+        border-color: $color_link;
+        background: $color_link;
+      }
+    }
+    &.ok {
+      border-color: $color_ok;
+      color: $color_ok;
+      &:hover {
+        color: white;
+        border-color: $color_link;
+        background: $color_link;
+      }
+    }
+  }
+  
+  &.btn-primary {
+    color: white;
+    border-color: $color_link_hover;
+    background-color: $color_link_hover;
+    &:hover {
+      border-color: $color_link;
+      background: $color_link;
+    }
+  }
+  
+  &.btn-danger {
+    color: white;
+    border-color: $color_error;
+    background-color: $color_error;
+    &:hover {
+      border-color: $color_link;
+      background: $color_link;
+    }
+  }
+  
+  &.btn-link {
+    border: none;
+    &:hover {
+      background: none;
+    }
+  }
+}

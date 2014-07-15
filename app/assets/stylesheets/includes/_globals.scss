@@ -1,6 +1,6 @@
 // Only add SASS variables and mixins in this file, no styling
 
-/* @import url(http://fonts.googleapis.com/css?family=Raleway:300,500,700); */
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,500,700);
 
 $page-min-width: 960px;
 $widget-width: 300px;
@@ -9,18 +9,19 @@ $widget-width: 300px;
 $page-width: 100%;
 $side-margin: 35px;
 
+/*
 $base-font: 'Montserrat', 'Cambria';
 $header-font: 'Montserrat', CaslonStdBlack;
 $button-font: 'Montserrat', Cambria;
+*/
 
-$bg-color: #e0e0e0;
+/* $bg-color: #e0e0e0; */
+/*
 
 $font-family-sans-serif: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-
-
 $font_title: 'Montserrat', sans-serif !important;
 $font_body: 'Open Sans', sans-serif !important;
+*/
 
 
 /*
@@ -28,6 +29,9 @@ $font-family-sans-serif: 'Open Sans', sans-serif;
 $font_title: 'Open Sans', sans-serif !important;
 $font_body: 'Raleway', sans-serif !important;
 */
+
+$base-font: 'Raleway', sans-serif;
+$second-font: 'Helvetica Neue', sans-serif;
 
 $font_size_huge: 6em;
 $font_size_biggest: 3em;

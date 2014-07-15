@@ -8,9 +8,8 @@ $color4:            #303030; // Dark grey
 $color5:            #B2BAC0; // Blue grey
 
 /* Colors */
-$color_link:        #2997D1; // Link blue
-$color_link_hover:  #000; // Link hover
-$color_link_hover:  darken($color_link, 30%); // Link hover
+
+//$color_link_hover:  darken($color_link, 30%); // Link hover
 
 
 $color_bg: #ebeae8;
@@ -20,8 +19,8 @@ $color_tootip: #43525a;
 $color_title: #64615a;
 $color_body: darken($color_title, 10%);
 
-$color_error: #CC4941;
-$color_ok: #518F41;
+//$color_error: #CC4941;
+//$color_ok: #518F41;
 $color_alert: #E27249;
 
 $color_bg_business: #3f3f3b /*#427933*/;
@@ -58,10 +57,19 @@ $pricered:      red;
 // Icon colors
 //$color_icon_swim:   #6db8df;
 //$color_icon_swim:   #3B8686;
-$color_icon_swim:   #1C5F84;
-$color_icon_cycle:  #f31a44;
-$color_icon_run:    #464646;
+//$color_icon_swim:   #1C5F84;
+//$color_icon_cycle:  #f31a44;
+//$color_icon_run:    #464646;
 
-$color_logo_teal: #455660;
-$color_logo_lightyellow: #d4bc89;
-$color_logo_darkyellow: #ddb860;
+$color_primary:   #455660;
+$color_secondary: #ddb860;
+$color_tertiary:  #d4bc89;
+
+$color_ok: #16a085;
+$color_error: #b42025;
+
+$color_link:        lighten($color_ok, 10%);
+$color_link_hover:  $color_ok;
+
+$color_link:        darken($color_secondary, 10%);
+$color_link_hover:  $color_ok;
