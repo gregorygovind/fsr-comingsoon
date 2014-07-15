@@ -105,6 +105,7 @@ div.cs-select {
 	-ms-user-select: none;
 	user-select: none;
 	color: black !important;
+	border-bottom: 2px solid #c0c0c0;
 }
 div.cs-select:focus {
 	outline: none; /* For better accessibility add a style for this in your skin */
