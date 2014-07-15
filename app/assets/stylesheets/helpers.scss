@@ -259,6 +259,64 @@ a {
 }
 
 /*** TEXT COLOR ***/
+.text-c-white {
+  color: white !important;
+}
+.text-c-black {
+  color: #000 !important;
+}
+.text-c-black_lighter {
+  color: lighten(#000, 25%) !important;
+}
+.text-c-black_lightest {
+  color: lighten(#000, 50%) !important;
+}
+.text-c-primary {
+  color: $color_primary !important;
+}
+.text-c-primary_darker {
+  color: darken($color_primary, 10%) !important;
+}
+.text-c-primary_lighter {
+  color: lighten($color_primary, 10%) !important;
+}
+.text-c-secondary {
+  color: $color_secondary !important;
+}
+.text-c-secondary_darker {
+  color: darken($color_secondary, 10%) !important;
+}
+.text-c-secondary_lighter {
+  color: lighten($color_secondary, 10%) !important;
+}
+.text-c-tertiary {
+  color: $color_tertiary !important;
+}
+.text-c-tertiary_darker {
+  color: darken($color_tertiary, 10%) !important;
+}
+.text-c-tertiary_lighter {
+  color: lighten($color_tertiary, 10%) !important;
+}
+.text-c-green {
+  color: $color_ok !important;
+}
+.text-c-green_darker {
+  color: darken($color_ok, 10%) !important;
+}
+.text-c-green_lighter {
+  color: lighten($color_ok, 10%) !important;
+}
+.text-c-error {
+  color: $color_error !important;
+}
+.text-c-error_darker {
+  color: darken($color_error, 10%) !important;
+}
+.text-c-error_lighter {
+  color: lighten($color_error, 10%) !important;
+}
+
 .text-darkgray {
   color: $darkgray;
 }
